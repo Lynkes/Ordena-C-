@@ -190,7 +190,7 @@
             "insercao",
             "agitacao",
             "pente",
-            "shell"});
+            "shake"});
             this.checkedListBox1.Location = new System.Drawing.Point(623, 344);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(147, 112);

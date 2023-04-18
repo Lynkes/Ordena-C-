@@ -66,7 +66,7 @@ namespace WinForms_OrdenaSegundaChava
                     numeros = linhas;
                     dado = new Dado(int.Parse(numeros[0]));
                     lista.Add(dado);
-                    textBox_dados.AppendText(dado.Chave1 + Environment.NewLine);
+                    //textBox_dados.AppendText(dado.Chave1 + Environment.NewLine);
                 }
                 textBox_qtdDados.Text = lista.Count.ToString();
                 panel_algoritmo.Enabled = true;
@@ -95,7 +95,7 @@ namespace WinForms_OrdenaSegundaChava
             //shell
             //posicionaPivo
             //quick
-            //heapSort
+            //shake
             //lista.SortMS
 
 
@@ -109,7 +109,7 @@ namespace WinForms_OrdenaSegundaChava
                     List<Dado> lista = lista2.ConvertAll(lista2 => new Dado(lista2.Chave1));
                     if (checkedListBox1.CheckedItems[i].ToString() == "bolha")
                     {
-                        exibirLista2(lista);
+                        //exibirLista2(lista);
                         textBox_console2.AppendText("Fim bolha lista Orig" + Environment.NewLine);
                         sw.Start();
                         
@@ -118,7 +118,7 @@ namespace WinForms_OrdenaSegundaChava
                         sw.Stop();
                         textBoxTempo.AppendText("Fim do bolha (ms): " + sw.ElapsedMilliseconds + Environment.NewLine);
                         sw.Reset();
-                        exibirLista(lista);
+                        //exibirLista(lista);
                         textBox_console.AppendText("Fim bolha" + Environment.NewLine);
                         
                     }
@@ -192,16 +192,15 @@ namespace WinForms_OrdenaSegundaChava
                         textBox_console.AppendText("Fim shell" + Environment.NewLine);
                         
                     }
-                    //if (checkedListBox1.CheckedItems[i].ToString() == "heapSort")
-                    //{
-                    //    sw.Start();
-                    //    Ordena.heapSort(lista);
-                    //    exibirLista(lista);
-                    //    sw.Stop();
-                    //    MessageBox.Show("Fim do heapSort (ms): " + sw.ElapsedMilliseconds);
-                    //    textBoxTempo.AppendText("Fim do heapSort (ms): " + sw.ElapsedMilliseconds + Environment.NewLine);
-                    //    sw.Reset();
-                    //}
+                    if (checkedListBox1.CheckedItems[i].ToString() == "shake")
+                    {
+                        sw.Start();
+                        Ordena.shake(lista);
+                        //exibirLista(lista);
+                        sw.Stop();
+                        textBoxTempo.AppendText("Fim do shake (ms): " + sw.ElapsedMilliseconds + Environment.NewLine);
+                        sw.Reset();
+                    }
                     //if (checkedListBox1.CheckedItems[i].ToString() == "lista.SortMS")
                     //{
                     //    sw.Start();
